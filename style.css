@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+	body{
+		background-color: #eeeeee;
+		color: #0f0f0f;
+	}
+
+	h1{
+		margin: 6px;
+		margin-top: 10px;
+	}
+
+	h2{
+		margin: 4px;
+	}
+
+	h3{
+		/* border: 1px solid; */
+		margin: 2px;
+		margin-top: 10px;
+	}
+
+/*
+	canvas{
+		border:2px black solid;
+	}
+*/
+
+	.left {
+		float:left;
+		width:60%;
+	}
+	.right {
+		float:right;
+		width:35%;
+	}
+
+	.text{
+		font-size: 80%;
+	}
+
+	#preview{
+		overflow: scroll;
+		margin: 5px;
+		width: 95%;
+		max-height: 400px;
+	}
+
+	/* 以下2つはクラス内のをfloatを解除する"crearfix"手法 */
+	.clearfix:after {
+		content: ".";  /* 新しい要素を作る */
+		display: block;  /* ブロックレベル要素に */
+		clear: both;
+		height: 0;
+		visibility: hidden;
+	}
+	.clearfix {
+		  min-height: 1px;
+	}
+

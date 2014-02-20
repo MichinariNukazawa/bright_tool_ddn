@@ -1,0 +1,107 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>写真加工</title>
+	<!--
+	<link rel="shortcut icon" href="icon.ico">
+	-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+	<!-- スライダ -->
+	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="js/JS-Image-Resizer/resize.js"></script>
+	<script type="text/javascript" src="js/JS-Image-Filters-ddn/brightness.js"></script>
+	<script type="text/javascript" src="js/JS-Image-Filters-ddn/hsv.js"></script>
+	<script type="text/javascript" src="js/JS-Image-Filters-ddn/chroma.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<LINK href="style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/tracks.js"></script>
+
+
+</head>
+<body>
+	<h1>写真補正</h1>
+	<noscript>
+		<p><font color="ee0000" size="+2">
+			このページの機能を使うにはJavaScriptを有効にしてください。<br />
+			This Page work use JavaScript. Please enabled.
+		</font></p>
+	</noscript>
+	明るすぎる・暗すぎる失敗写真を、綺麗に調整することができます<br />
+	<div class="left">
+		<h3>写真を選ぶ<font size="-1"></font></h3>
+		<input type="file" id="file_upload" onchange="cb_file_select(this, event)">
+		<br />
+		<canvas id="thumb_canvas" width="404" height="404">
+			ご使用のブラウザでは本サービスを使用することはできません。<br />
+			特にInternet Explorerバージョン9以前では使用できません。<br />
+			<a href="http://www.mozilla.jp/firefox/">FireFox</a>、
+			<a href="http://www.google.co.jp/intl/ja/chrome/browser/">Chrome</a>
+			またはIE10以降をお使いください。<br />
+		</canvas>
+		<br />
+		明るさ調整：
+		<input id="input_brightness" type="text" size="3" readonly>
+		<div id="slider_brightness" style="width:400px;"></div>
+		<br />
+		色の濃さも自動調整
+		<input type="checkbox" id="checkbox_chroma" onchange="cb_chroma_support(this, event)" checked>
+		<br />
+		<a download="filename_st.png" title="download st" id="download_link"
+			onclick="cb_download();"
+			href="data:image/bmp;base64,">
+			<input type="button" value="写真をダウンロード">
+		</a>
+		<br />
+		<font size="-2">※ダウンロードまで時間がかかる場合があります</font>
+		<br />
+		<br />
+
+	<h2>使い方</h2>
+	<div class="text">
+	・「ファイルを選ぶ」ボタンで加工したい画像を選ぶ<br />
+	・スライダを「明るくする」「暗くする」の方向へ動かす<br />
+	・「ダウンロードする」ボタンで見やすくなった画像をダウンロード<br />
+	<br />
+	写真の明るさを調整できます。
+	明るすぎたり暗すぎる画像を見やすくしたい場合に役立ちます<br />
+	<br />
+	<font size="-2">
+	<br />
+	・写真加工をすべてJavaScriptで行なっています。写真はサーバに送信されません<br />
+	・本サイトを使用したことによる責任は、すべてユーザが負うこととします。<br />
+	</font>
+	</div>
+	</div>
+	<div class="right">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- brighttool-300x600 -->
+		<ins class="adsbygoogle"
+			style="display:inline-block;width:300px;height:600px"
+			data-ad-client="ca-pub-5057531329998733"
+			data-ad-slot="7375777206"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+	<div style="clear:both">
+	</div>
+	<div>
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- brighttool-728x90 -->
+		<ins class="adsbygoogle"
+			style="display:inline-block;width:728px;height:90px"
+			data-ad-client="ca-pub-5057531329998733"
+			data-ad-slot="1329243602"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+	<div class="footer">
+		<hr>
+		<a href="information.html">免責事項・謝辞</a>
+	</div>
+</body>
+</html>
